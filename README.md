@@ -35,14 +35,6 @@ Para rodar esse projeto localmente:
 2. Abra o arquivo `index.html` diretamente no seu navegador de preferência.
 3. O projeto será carregado e você poderá interagir com os campos.
 
-## Deploy
-
-Você pode hospedar este projeto gratuitamente usando as seguintes plataformas:
-
-- [GitHub Pages](https://pages.github.com/)
-- [Netlify](https://www.netlify.com/)
-- [Vercel](https://vercel.com/)
-
 ## Contribuindo
 
 Contribuições são bem-vindas! Se você tiver sugestões de melhorias ou correções, fique à vontade para abrir um **pull request** ou **issue**.
