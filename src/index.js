@@ -26,3 +26,21 @@ putInCaps.addEventListener('input', ev =>{
     const upperCaseText = lowerCaseText.toUpperCase()
     ev.target.value = upperCaseText
 })
+
+document.querySelectorAll("button[id^='copyButton']").forEach(button => {
+    button.addEventListener("click", async function () {
+        let parentDiv = this.closest("div"); 
+        let inputField = parentDiv.querySelector("input, textarea"); 
+
+        if (inputField) {
+            inputField.setSelectionRange(0, inputField.value.length); 
+
+            try {
+                await navigator.clipboard.writeText(inputField.value);
+            } catch (err) {
+                console.error("Erro ao copiar:", err);
+            }
+        }
+    });
+});
+

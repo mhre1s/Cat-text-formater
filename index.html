@@ -23,21 +23,24 @@
             Formatador de texto do CAT
         </h1>
     </div>
-    <form class="relative z-20 flex mx-auto sm:w-96 gap-5 items-center group h-8 flex-col" action="">
+    <form class="relative z-20 flex mx-auto sm:w-96 gap-5 items-center group flex-col" action="">
         <div class="flex flex-col text-center w-full">
             <label class="text-white" for="cpf">CPF/CNPJ:</label>
             <input class="bg-amber-50 rounded-md pl-1.5 h-8 grow focus:outline-none w-full" type="text" name="cpf" id="cpf" placeholder="Digite o CPF/CNPJ">
+            <button id="copyButton" class="text-amber-50"><img class="h-8 w-8 pt-1.5" src="src/icons8-copiar-64.png" alt="" srcset=""></button>
+            
         </div>
         <div class="flex flex-col text-center w-full">
             <label class="text-white" for="capslock">Tirar Caps Lock:</label>
-            <input class="bg-amber-50 rounded-md pl-1.5 h-8 grow focus:outline-none w-full" type="text" name="capslock" id="capslock" placeholder="Digite o texto em Caps lock">
-        </div>
+            <textarea class="bg-amber-50 min-h-44 rounded-md pl-1.5 h-8 grow focus:outline-none w-full" placeholder="Digite o texto em Caps lock" name="capslock" id="capslock"></textarea>
+            <button id="copyButton" class="text-amber-50"><img class="h-8 w-8 pt-1.5" src="src/icons8-copiar-64.png" alt="" srcset=""></button>
+            </div>
         <div class="flex flex-col text-center w-full">
             <label class="text-white" for="put-capslock">Colocar em Caps Lock:</label>
-            <input
-                class="bg-amber-50 rounded-md pl-1.5 h-8 grow focus:outline-none w-full"
-                type="text" name="put-capslock" id="put-capslock" placeholder="Digite o texto para por em Caps lock">
+            <textarea class="bg-amber-50 min-h-44 rounded-md pl-1.5 grow focus:outline-none w-full" name="put-capslock" id="put-capslock" placeholder="Digite o texto para por em Caps lock"></textarea>
+            <button id="copyButton" class="text-amber-50"><img class="h-8 w-8 pt-1.5" src="src/icons8-copiar-64.png" alt="" srcset=""></button>
         </div>
+        
     </form>
     <script src="./src/index.js"></script>
 </body>

@@ -794,8 +794,20 @@
   .aspect-square {
     aspect-ratio: 1 / 1;
   }
+  .h-1 {
+    height: calc(var(--spacing) * 1);
+  }
   .h-8 {
     height: calc(var(--spacing) * 8);
+  }
+  .h-10 {
+    height: calc(var(--spacing) * 10);
+  }
+  .h-12 {
+    height: calc(var(--spacing) * 12);
+  }
+  .h-24 {
+    height: calc(var(--spacing) * 24);
   }
   .h-screen {
     height: 100vh;
@@ -805,6 +817,12 @@
   }
   .max-h-screen {
     max-height: 100vh;
+  }
+  .min-h-44 {
+    min-height: calc(var(--spacing) * 44);
+  }
+  .min-h-96 {
+    min-height: calc(var(--spacing) * 96);
   }
   .min-h-none {
     min-height: none;
@@ -817,6 +835,18 @@
   }
   .w-1\/2 {
     width: calc(1/2 * 100%);
+  }
+  .w-8 {
+    width: calc(var(--spacing) * 8);
+  }
+  .w-10 {
+    width: calc(var(--spacing) * 10);
+  }
+  .w-12 {
+    width: calc(var(--spacing) * 12);
+  }
+  .w-24 {
+    width: calc(var(--spacing) * 24);
   }
   .w-full {
     width: 100%;
@@ -1228,12 +1258,6 @@
   }
   .justify-items-stretch {
     justify-items: stretch;
-  }
-  .gap-2 {
-    gap: calc(var(--spacing) * 2);
-  }
-  .gap-3 {
-    gap: calc(var(--spacing) * 3);
   }
   .gap-5 {
     gap: calc(var(--spacing) * 5);
@@ -1674,6 +1698,12 @@
   .py-16 {
     padding-block: calc(var(--spacing) * 16);
   }
+  .pt-1 {
+    padding-top: calc(var(--spacing) * 1);
+  }
+  .pt-1\.5 {
+    padding-top: calc(var(--spacing) * 1.5);
+  }
   .pl-1 {
     padding-left: calc(var(--spacing) * 1);
   }
@@ -1806,6 +1836,15 @@
   }
   .\[color\:red\]\/50\! {
     color: color-mix(in oklab, red 50%, transparent) !important;
+  }
+  .text-amber-50 {
+    color: var(--color-amber-50);
+  }
+  .text-blue-50 {
+    color: var(--color-blue-50);
+  }
+  .text-green-600 {
+    color: var(--color-green-600);
   }
   .text-transparent {
     color: transparent;
@@ -2268,11 +2307,6 @@
   .sm\:w-96 {
     @media (width >= 40rem) {
       width: calc(var(--spacing) * 96);
-    }
-  }
-  .md\:block {
-    @media (width >= 48rem) {
-      display: block;
     }
   }
   .md\:text-6xl {
