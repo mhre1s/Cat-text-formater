@@ -28,7 +28,8 @@ putInCaps.addEventListener('input', ev =>{
 })
 
 document.querySelectorAll("button[id^='copyButton']").forEach(button => {
-    button.addEventListener("click", async function () {
+    button.addEventListener("click", async function (ev) {
+        ev.preventDefault()
         let parentDiv = this.closest("div"); 
         let inputField = parentDiv.querySelector("input, textarea"); 
 
@@ -37,6 +38,10 @@ document.querySelectorAll("button[id^='copyButton']").forEach(button => {
 
             try {
                 await navigator.clipboard.writeText(inputField.value);
+                let message = parentDiv.querySelector("#paragraph")
+                message.classList.remove("hidden")
+
+                setTimeout(()=>message.classList.add("hidden"), 2000)
             } catch (err) {
                 console.error("Erro ao copiar:", err);
             }
